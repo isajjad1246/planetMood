@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+      <title>Neptune</title> 
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  
+    <div class = "topnav">
+    <a class="#Home" href="index.html">Home</a>
+    </div>
+
+  <center><body style="background-color: lightblue;">
+  <h1><u> Neptune </h1></u>
+</center>
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">      
+ <div class = "neptuneinfo"> <p>If you're feeling blue, write down some thoughts for you...
+   </p></div>
+<BR><BR><BR><BR>
+<center>
+<FORM NAME="WordForm">  
+<INPUT TYPE=TEXT NAME="WordBox" id="wordbox" style="width:1000px;font-size:14pt;" ><BR><BR>
+<INPUT TYPE=BUTTON VALUE="Generate" onClick="PickRandomPrompt(document.WordForm);" id="button">
+</FORM></center>
+</body>
+
+<script>
+var NumberOfWords = 29
+var words = new BuildArray(NumberOfWords)
+words[1] = "What are 3 new hobbies you would like to try?"
+words[2] = "What is a goal you are working towards this week?"
+words[3] = "How was your day? Write about everything that happened and how you felt."
+words[4] = "What is your favourite uplifting song?"
+words[5] = "Who/what are you most grateful for in your life?"
+words[6] = "I am happiest when…"
+words[7] = "What is unique about your personality?"
+words[8] = "When do you feel most confident?"
+words[9] = "I feel peaceful when…"
+words[10] = "What was the happiest time of your life? Why was that?"
+words[11] = "What is the nicest thing you have ever done for yourself? What is something you are going to do that is nice for yourself today?"
+words[12] = "Write 3 things you like most about yourself."
+words[13] = "What is your biggest weakness? How can you work on improving this?"
+words[14] = "Describe how you want your life to look in 5, 10, and 20 years"
+words[15] = "What are the three things that scare you the most and why?"
+words[16] = "When times get tough I want to remember that..."
+words[17] = "This week I am looking forward to these three things:"
+words[18] = "If I could meet anyone in the world I would like to meet _____ because..."
+words[19] = "Who has been your biggest inspiration/supporter? Write that person a thank you letter"
+words[20] = "Today my victories were:"
+words[21] = "If you could go anywhere in the world, where would you go and why?"
+words[22] = "No matter how terrible my day is these things can always make me feel better:"
+words[23] = "What do you wish most people knew about you and why?"
+words[24] = "A fear I would like to overcome is ________. I can do these things to start overcoming it:"
+words[25] = "If I could have any career I would be a __________ because:"
+words[26] = "How do you want to be remembered?"
+words[27] = "What is a trait that you admire most in others? In what ways do you see that trait in yourself?"
+words[28] = "What would unconditional love look like for you? What would it feel like?"
+words[29] = "How would you describe yourself to a stranger?"
+
+function BuildArray(size){
+this.length = size
+for (var i = 1; i <= size; i++){
+this[i] = null}
+return this
+}
+
+function PickRandomPrompt(frm) {
+var rnd = Math.ceil(Math.random() * NumberOfWords)
+frm.WordBox.value = words[rnd]
+}
+  </script>
+ 
+</html>
